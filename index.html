@@ -10,37 +10,39 @@
     <title>Document</title>
 </head>
 <body class="bg-swarm debug">
-    <script src="app.js"></script>
-
-<header class="">
-    <h1 class="txt-color">swarm</h1>
-</header>
-<main class="container-fluid">
-    <section class="row">
-        <div class="col-6 ">
-            <!-- ANCHOR Need to center these but have to move on -->
-            <section class="border rounded">
-                <img class="img-fluid center" src="Estate.png" alt="The Estate">
-                <h3 class="estateID">The Estate</h3>
-            </section>
-        </div>
-
-        <div class="col-6">
-            <section class="border rounded">
+    
+    <header class="">
+        <h1 class="txt-color">swarm</h1>
+    </header>
+    <main class="container-fluid">
+        <section class="row">
+            <div class="col-6 ">
+                <!-- ANCHOR Need to center these but have to move on -->
+                <section class="border rounded">
+                    <img class="img-fluid center" src="Estate.png" alt="The Estate">
+                    <h3>The Estate</h3>
+                    <p id="estateID"></p>
+                </section>
+            </div>
+            
+            <div class="col-6">
+                <section class="border rounded">
                 <img class="img-fluid" src="Church.png" alt="The Church">
-                <h3 class="churchID">The Church</h3>
+                <h3>The Church</h3>
+                <p id="churchID"></p>
             </section>
             
         </div>
-
+        
         <div class="col-6">
             <section class="border rounded">
-               <img class="img-fluid" src="Hospital.png" alt="The Hospital">
-                <h3 class="hospitalID">The Hospital</h3> 
+                <img class="img-fluid" src="Hospital.png" alt="The Hospital">
+                <h3>The Hospital</h3> 
+                <p id="hospitalID"></p>
             </section>
             
         </div>
-
+        
         <div class="col-6">
             <section class="border rounded">
                 <img class="img-fluid" src="Crypt.png" alt="The Crypt">
@@ -48,9 +50,10 @@
                 <p id="cryptID"></p>
             </section>
         </div>
-
+        
     </section>
-
+    
 </main>
+<script src="app.js"></script>
 </body>
 </html>

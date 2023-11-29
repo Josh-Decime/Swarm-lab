@@ -1,67 +1,82 @@
 console.log('the sun has set')
 
 const locations = [
-    'Estate.png', 'Church.png', 'Hospital.png', 'Crypt.png', 
+    'estateID', 'churchID', 'hospitalID', 'cryptID', 
 ]
 
 const people = [{
         name: 'Cathrine',
         picture: 'Cathrine.png',
-        location: 'estateID'
+        currentPlace: 'estateID',
     },
     {
         name: 'Hector',
         picture: 'Hector.png',
-        location: 'estateID'
+        currentPlace: 'estateID'
     },
     {
         name: 'Hyde',
         picture: 'Hyde.png',
-        location: 'estateID'
+        currentPlace: 'estateID'
     },
     {
         name: 'Jenny',
         picture: 'Jenny.png',
-        location: 'churchID'
+        currentPlace: 'churchID'
     },
     {
         name: 'Jim',
         picture: 'Jim.png',
-        location: 'churchID',
+        currentPlace: 'churchID',
     },
     {
         name: 'Julie',
         picture: 'Julie.png',
-        location: 'churchID',
+        currentPlace: 'churchID',
     },
     {
         name: 'Keith',
         picture: 'Keith.png',
-        location: 'hospitalID',
+        currentPlace: 'hospitalID',
     },
     {
         name: 'Margret',
         picture: 'Margret.png',
-        location: 'hospitalID',
+        currentPlace: 'hospitalID',
     },
     {
         name: 'Suzy',
         picture: 'Suzy.png',
-        location: 'hospitalID',
+        currentPlace: 'hospitalID',
     },
     {
         name: 'Tommy',
         picture: 'Tommy.png',
-        location: 'cryptID',
+        currentPlace: 'cryptID',
     },
     {
         name: 'VanGogh',
         picture: 'VanGogh.png',
-        location: 'cryptID',
+        currentPlace: 'cryptID',
     },
     {
         name: 'Victoria',
         picture: 'Victoria.png',
-        location: 'cryptID',
+        currentPlace: 'cryptID',
     }
 ]
+
+function drawPeople() {
+    locations.forEach(location =>{
+        console.log(location)
+        let filteredPeople = people.filter(people => people.currentPlace == location)
+        console.log('📦', filteredPeople)
+        const locationElm = document.getElementById(location)
+        console.log('🗺️', locationElm)
+        let peopleIMG = filteredPeople.map(people => people.name)
+        console.log('😁', peopleIMG)
+
+        locationElm.innerText = peopleIMG.join(' ')
+    })
+}
+drawPeople()
