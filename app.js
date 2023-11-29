@@ -73,10 +73,17 @@ function drawPeople() {
         console.log('📦', filteredPeople)
         const locationElm = document.getElementById(location)
         console.log('🗺️', locationElm)
-        let peopleIMG = filteredPeople.map(people => people.name)
+        let peopleIMG = filteredPeople.map(people => people.picture)
         console.log('😁', peopleIMG)
 
-        locationElm.innerText = peopleIMG.join(' ')
+        let template = ''
+        peopleIMG.forEach(image=>{
+            // debugger
+            template += `<img class="people-img" src="/${image}" alt="${image.slice(0,(image.length-4))}">` 
+            locationElm.innerHTML =  template
+        })
+
+        // locationElm.innerText = peopleIMG.join(' ')
     })
 }
 drawPeople()
