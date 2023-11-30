@@ -86,4 +86,29 @@ function drawPeople() {
         // locationElm.innerText = peopleIMG.join(' ')
     })
 }
-drawPeople()
+
+
+function movePeople() {
+    people.forEach(person=> {
+        if (person.peopleIMG != '👻') { //👻 is a placeholder for my ghost that isn't written yet
+            let newPlace = locations[Math.floor(Math.random()*locations.length)]
+            console.log(newPlace)
+            person.currentPlace = newPlace
+     
+        } 
+    })
+    drawPeople()
+}
+// NOTE this move people is outside of a function 
+movePeople()
+
+function attackButton(locationClicked){
+    console.log('🔍', locationClicked)
+    let peopleInRoom = people.filter(person => person.currentPlace == locationClicked)
+    console.log(peopleInRoom)
+    peopleInRoom.picture = ''
+}
+
+function reaping() {
+    let reapedPlace = victimsLocation
+}

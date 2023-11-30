@@ -9,7 +9,9 @@
     <script id="debug-script" src="https://cdn.jsdelivr.net/gh/MickShannahan/style-debug@latest/debug.min.js" defer></script>
     <title>Document</title>
 </head>
-<body class="bg-swarm debug">
+            <!-- DEBUG -->
+<body class="bg-swarm ">
+    <!-- <button class="btn btn-danger" onclick="movePeople()">LET THE REAPING BEGIN</button> -->
     
     <header class="">
         <h1 class="txt-color">swarm</h1>
@@ -20,10 +22,12 @@
                 <!-- ANCHOR Need to center these but have to move on -->
                 <section class="border rounded">
                     <img class="img-fluid center" src="Estate.png" alt="The Estate">
-                    <h3>The Estate</h3>
+                    <h3 class="text-center">The Estate</h3>
+                    <button class="btn btn-dark" onclick="attackButton('estateID')">ATTACK</button>
                     <div id="estateID">
                         <!-- ANCHOR img template for the people -->
 <!-- <img class="people-img" src="https://t4.ftcdn.net/jpg/00/97/58/97/360_F_97589769_t45CqXyzjz0KXwoBZT9PRaWGHRk5hQqQ.jpg" alt="person name"> -->
+                            <!-- ANCHOR THANK YOU SAM!!!! -->
 
                     </div>
                 </section>
@@ -32,7 +36,8 @@
             <div class="col-6">
                 <section class="border rounded">
                 <img class="img-fluid" src="Church.png" alt="The Church">
-                <h3>The Church</h3>
+                <h3 class="text-center">The Church</h3>
+                <button class="btn btn-dark" onclick="attackButton('churchID')">ATTACK</button>
                 <p id="churchID"></p>
             </section>
             
@@ -41,7 +46,8 @@
         <div class="col-6">
             <section class="border rounded">
                 <img class="img-fluid" src="Hospital.png" alt="The Hospital">
-                <h3>The Hospital</h3> 
+                <h3 class="text-center">The Hospital</h3>
+                <button class="btn btn-dark" onclick="attackButton('hospitalID')">ATTACK</button>
                 <p id="hospitalID"></p>
             </section>
             
@@ -51,6 +57,7 @@
             <section class="border rounded">
                 <img class="img-fluid" src="Crypt.png" alt="The Crypt">
                 <h3 class="text-center">The Crypt</h3>
+                <button class="btn btn-dark" onclick="attackButton('cryptID')">ATTACK</button>
                 <p id="cryptID"></p>
             </section>
         </div>

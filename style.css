@@ -8,7 +8,7 @@
 .people-img{
     height: 7vh;
     width: 7vh;
-    border-radius: 50%;
-    object-fit: cover;
+    /* border-radius: 50%; */
+    object-fit: contain;
     object-position: center;
 }
