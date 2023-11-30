@@ -90,7 +90,8 @@ function drawPeople() {
 
 function movePeople() {
     people.forEach(person=> {
-        if (person.peopleIMG != '👻') { //👻 is a placeholder for my ghost that isn't written yet
+        if (person.peopleIMG != 'Ghost.png') { //this doesnt stop them moving but thats ok, they dont have to stop. 
+            // NOTE This code is sloppy, could use a cleanup
             let newPlace = locations[Math.floor(Math.random()*locations.length)]
             console.log(newPlace)
             person.currentPlace = newPlace
@@ -98,6 +99,7 @@ function movePeople() {
         } 
     })
     drawPeople()
+    youWin()
 }
 // NOTE this move people is outside of a function 
 movePeople()
@@ -107,11 +109,25 @@ function attackButton(locationClicked){
     let peopleInRoom = people.filter(person => person.currentPlace == locationClicked)
     console.log(peopleInRoom)
     peopleInRoom.forEach(person => {
-        person.picture = 'Ghost.png';
-    });
-    drawPeople()
+        person.picture = 'Ghost.png'
+    })
+    movePeople()
 }
 
-// function reaping() {
-//     let reapedPlace = victimsLocation
-// }
+
+
+
+
+function youWin() {
+    let allGhosts = people.every(person => person.picture == 'Ghost.png')
+    console.log('👻', allGhosts)
+    if (allGhosts) {
+        console.log.apply(' YOU WIN')
+        window.alert('The Haunting is Complete!')
+    }
+    
+}
+
+// in the wrong spot, had to have it call in a function that is running, if its here then it doesn't trigger. figure out by console.log youWin() after all ghosts has been met.. THEN it triggers.. only took a freaking hour to figure that out... im TIRED!!!
+// youWin()
+
