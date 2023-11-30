@@ -80,9 +80,9 @@ function drawPeople() {
         peopleIMG.forEach(image=>{
             // debugger
             template += `<img class="people-img" src="/${image}" alt="${image.slice(0,(image.length-4))}">` 
-            locationElm.innerHTML =  template
+            
         })
-
+            locationElm.innerHTML =  template
         // locationElm.innerText = peopleIMG.join(' ')
     })
 }
@@ -106,9 +106,12 @@ function attackButton(locationClicked){
     console.log('🔍', locationClicked)
     let peopleInRoom = people.filter(person => person.currentPlace == locationClicked)
     console.log(peopleInRoom)
-    peopleInRoom.picture = ''
+    peopleInRoom.forEach(person => {
+        person.picture = 'Ghost.png';
+    });
+    drawPeople()
 }
 
-function reaping() {
-    let reapedPlace = victimsLocation
-}
+// function reaping() {
+//     let reapedPlace = victimsLocation
+// }
